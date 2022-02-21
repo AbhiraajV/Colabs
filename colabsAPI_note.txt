@@ -1,0 +1,10 @@
+Create Task{
+    1.User must be logged in and verified
+    2.Task title cannot be null
+    3.Atleast 1 contributor must be added on initialization
+    4.Parent Project must exist
+    5.Creator of task must be the creator of the Project
+    6.User being added must be in creators Circle
+    7.User being added must be in the parentProject's member's list
+    8.Once task is created its Id is also added to the project models task list 
+} 

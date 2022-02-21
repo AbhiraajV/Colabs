@@ -1,0 +1,61 @@
+module.exports = {
+  search__user: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginLeft: "-1.5rem",
+  },
+  search__user__icon: {
+    color: "var(--gray6)",
+    zIndex: 99,
+    position: "relative",
+    left: "1.6rem",
+  },
+  search__user__icon_open: {
+    color: "var(--gray0)",
+    zIndex: "99",
+    position: "relative",
+    left: "1.6rem",
+  },
+  search__user__input: {
+    border: "none",
+    borderRadius: "50%",
+    fontFamily: "inherit",
+    outline: "none",
+    color: "var(--gray0)",
+    width: "2rem",
+    height: "2rem",
+    backgroundColor: "var(--gray0)",
+    borderBottom: "0px solid #1f2833",
+    transition:
+      " 500ms width ease-in-out, 500ms padding ease-in-out,500ms border-radius ease-in-out, 250ms background-color ease-in-out,500ms border-bottom ease-in-out",
+  },
+  search__user__input_open: {
+    border: "none",
+    fontFamily: " inherit",
+    outline: "none",
+    color: "var(--gray0)",
+    height: "2rem",
+    backgroundColor: "var(--gray5)",
+    transition:
+      "500ms width ease-in-out, 500ms padding ease-in-out,500ms border-radius ease-in-out, 250ms background-color ease-in-out,500ms border-bottom ease-in-out",
+    width: "7rem",
+    paddingLeft: "2rem",
+    height: "2rem",
+    borderRadius: "0%",
+    borderBottom: "2px solid var(--pink-dark)",
+  },
+  search__close: {
+    position: "relative",
+    fontSize: "1.5rem",
+    right: "0%",
+    color: "var(--gray5)",
+    transition: "500ms color ease-in-out",
+  },
+  search__close_open: {
+    position: "relative",
+    fontSize: "1.5rem",
+    right: "10%",
+    color: "var(--gray0)",
+  },
+};

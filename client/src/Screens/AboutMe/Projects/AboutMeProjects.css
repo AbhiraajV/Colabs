@@ -1,0 +1,159 @@
+.AboutGlassContainer {
+  position: relative;
+  margin-left: -20px;
+  margin-top: 50px;
+  margin-bottom: 3rem;
+  color: var(--gray2);
+  opacity: 0;
+  transform: translateY(20em);
+  animation: glassup 1s cubic-bezier(0.19, 1, 0.22, 1) 6.5s both;
+}
+@keyframes glassup {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.AboutGlassCard {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background-image: linear-gradient(
+    220deg,
+    rgba(55, 0, 184, 0.432),
+    #6e4ecf91,
+    #7f60e68c,
+    #d8b8ff8a,
+    #e7dbff00,
+    #fdfdfd00
+  );
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  box-shadow: 0px 15px 20px 10px #b600ce5b,
+    42px 42px 21px -37px rgba(255, 255, 255, 0.49) inset;
+  /* -30px -26px 50px -37px rgba(21, 0, 68, 0.97) inset; */
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  /* border-left: 1px solid rgba(255, 255, 255, 0.5); */
+}
+@media screen and (max-width: 301px) {
+  .AboutGlassCard {
+    width: 100%;
+  }
+}
+.AboutGlassContentBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.AboutGlassCard:hover .AboutGlassContentBox {
+  opacity: 1;
+}
+
+.AboutGlassContentBox h3 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.4em;
+}
+.AboutGlassContentBox h5 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+
+.AboutGlassContentBox p {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.1em;
+}
+
+.ProjIcons {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+}
+.ProjIcons li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.AboutGlassContainer:hover .ProjIcons li:nth-child(1) {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.AboutGlassContainer:hover .ProjIcons li:nth-child(2) {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 0.5s;
+
+  transition-delay: 0.2s;
+}
+
+.AboutGlassContainer:hover .ProjIcons li:nth-child(3) {
+  transform: translateY(0px);
+  opacity: 1;
+  transition: 0.5s;
+
+  transition-delay: 0.4s;
+}
+.ProjIcons li:nth-child(1) {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.5s;
+}
+.ProjIcons li:nth-child(2) {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.5s;
+  transition-delay: 0.2s;
+}
+
+.ProjIcons li:nth-child(3) {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.5s;
+  transition-delay: 0.4s;
+}
+.ProjIcons li a {
+  font-size: 24px;
+}
+.ProjReadMore {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 2px 10px;
+  color: var(--gray2);
+  cursor: pointer;
+  margin-top: 30px;
+}
+.AboutGlassContentBox h1 {
+  position: absolute;
+  top: -40px;
+  right: 15px;
+  font-size: 8em;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-head);
+}

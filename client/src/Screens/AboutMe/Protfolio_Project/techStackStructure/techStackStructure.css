@@ -1,0 +1,80 @@
+.AboutProject {
+  --bg-clr: black;
+  --txt-clr: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  color: white;
+  gap: 2rem;
+}
+
+.AboutProject.light {
+  --bg-color: white;
+  --txt-clr: black;
+  background-color: white;
+  transition: background-color 250ms ease-in-out;
+}
+.PortfolioTechName {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: var(--font-head);
+  font-weight: 500;
+  font-size: 4rem;
+  margin-right: 2rem;
+}
+li {
+  list-style: none;
+}
+.ptd-kw {
+  background-color: var(--pink);
+}
+
+@media screen and (max-width: 900px) {
+  .PortfolioTechName {
+    font-size: 2.5rem !important;
+  }
+}
+@media screen and (max-width: 460px) {
+  .PortfolioTechName {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .PortfolioTechName {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 335px) {
+  .PortfolioTechName {
+    font-size: 1.5rem;
+  }
+}
+.PortfolioTechDesc {
+  font-size: 1.25rem;
+  font-family: "Montserrat", sans-serif;
+}
+@media screen and (max-width: 920px) {
+  .PortfolioTechDesc {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 920px) {
+  .PortfolioTechContainer {
+    display: contents !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .PortfolioTechDesc {
+    font-size: 0.8rem;
+  }
+}
+.PortfolioTechContainer {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,13 @@
+@media screen and (max-width: 650px) {
+  .Logo {
+    width: 90%;
+  }
+  .Logo-Text {
+    display: none;
+  }
+}
+.Logo-Text {
+  z-index: 9999;
+  font-family: var(--font-head) !important;
+  font-weight: bolder;
+}

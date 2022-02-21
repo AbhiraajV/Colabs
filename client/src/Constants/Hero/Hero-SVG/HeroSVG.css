@@ -1,0 +1,43 @@
+.HeroSVG {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  bottom: -15%;
+  right: -15%;
+}
+@media screen and (max-width: 890px) {
+  .HeroSVG {
+    width: 100%;
+    bottom: 15%;
+    right: -30%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .HeroSVG {
+    width: 100%;
+
+    bottom: 10% !important;
+    right: 50% !important;
+    transform: translate(50%, 0%);
+    position: relative !important;
+  }
+}
+.Helpers {
+  position: absolute;
+  z-index: 3;
+  left: 20%;
+}
+.Laptop {
+  position: absolute;
+  z-index: 1;
+}
+.ToolCircle {
+  position: absolute;
+  z-index: 2;
+  width: 30%;
+  transform: translate(15%, -50%);
+}

@@ -1,0 +1,74 @@
+:root {
+  --calendar-width: 100px;
+}
+.createButtonStyle {
+  color: var(--gray6);
+  background: var(--gray0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  transform: rotate(180deg);
+  border-radius: 50%;
+  transition: 250ms background ease-in-out, 250ms color ease-in-out;
+}
+.createButtonStyle:hover {
+  background: var(--pink-dark);
+  color: var(--gray0);
+}
+.createTodoCount {
+  position: absolute;
+  top: 1.2rem;
+  left: 12.6rem;
+  background: var(--pink-dark);
+  width: 20px;
+  height: 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  z-index: 1200;
+}
+.showCalendar {
+  margin: 1rem;
+  position: relative;
+  top: -1%;
+  left: 0;
+  color: var(--gray6);
+  background: var(--gray0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  transition: 500ms background ease-in-out, 500ms color ease-in-out,
+    500ms top ease-in-out, 500ms left ease-in-out;
+}
+.closeCalendar {
+  color: var(--gray0);
+  background: red;
+  position: absolute;
+  top: -1.5%;
+  z-index: 10909090;
+  left: -1.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  transition: 500ms position ease-in-out, background ease-in-out,
+    500ms color ease-in-out, 500ms top ease-in-out, 500ms left ease-in-out;
+}
+.closeCalendar:hover {
+  color: #1f2833;
+  background: var(--gray0);
+}
+
+.showCalendar:hover {
+  background: var(--pink-dark);
+  color: var(--gray0);
+}

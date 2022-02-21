@@ -1,0 +1,78 @@
+.navbar-search {
+  border-radius: 50%;
+  width: 2rem;
+  background-color: transparent;
+  /* border: 2px solid var(--purple-light); */
+  border-bottom: 0px solid var(--purple-light);
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  transition: border-radius 0.25s ease-in-out, width 0.5s ease-in-out,
+    background-color 0.25s ease, border-bottom 0.25s ease-in-out;
+  height: 2rem;
+  /* border: none; */
+  outline: none;
+}
+/* .navbar-search:hover {
+  background-color: var(--purple-dark);
+  color: white !important;
+  transition: background-color 0.25s ease-in-out;
+} */
+.navbar-search-open {
+  border-radius: 1rem;
+  width: 20rem;
+  background-color: transparent !important;
+  border-bottom: 2px solid var(--purple-light) !important;
+  transition: border-radius 0.25s ease-in-out, width 0.5s ease-in-out,
+    background-color 0.25s ease, border-bottom 0.25s ease-in-out;
+  height: 2rem;
+  border: none;
+  outline: none;
+  color: white;
+  padding-inline: 1rem;
+  font-size: medium;
+}
+/* @media screen and (max-width: 538px) {
+  .navbar-search-open {
+    position: absolute;
+    top: 10000%;
+    border-radius: 1rem;
+    width: 20rem;
+    background-color: transparent !important;
+    border-bottom: 2px solid var(--purple-light) !important;
+    transition: border-radius 0.25s ease-in-out, width 0.5s ease-in-out,
+      background-color 0.25s ease, border-bottom 0.25s ease-in-out;
+    height: 2rem;
+    border: none;
+    outline: none;
+    color: white;
+    padding-inline: 1rem;
+    font-size: medium;
+  }
+} */
+.searchIcon {
+  position: absolute;
+  left: 0rem;
+  cursor: pointer;
+
+  /* color: white; */
+  /* background-color: var(--purple-light); */
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.35rem;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+/* .searchIcon:hover {
+  color: var(--gray1);
+  background-color: var(--purple-dark);
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+} */
+.searchIcon-open {
+  position: absolute;
+  right: 1.5rem;
+  top: 0.5rem;
+  color: var(--purple-light);
+  font-size: larger;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}

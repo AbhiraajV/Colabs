@@ -1,0 +1,151 @@
+.AboutMeBody {
+  width: 100%;
+  height: calc(100% - 80px);
+}
+.AboutMeBodyLeft {
+  padding-left: 100px;
+  padding-top: 4rem;
+}
+
+@media screen and (max-width: 840px) {
+  .AboutMeBodyLeft {
+    padding-left: 12px;
+    padding-top: 12px;
+  }
+  .lgline {
+    width: 1px;
+  }
+}
+.smline {
+  width: 0;
+  height: 3px;
+  background: var(--gray2);
+  animation: smline 0.5s cubic-bezier(0.19, 1, 0.22, 1) 4.3s both;
+}
+@keyframes smline {
+  100% {
+    width: 60px;
+  }
+}
+.AboutMeName > h4 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--gray2);
+  font-size: 2rem;
+  margin-top: 1.5rem;
+  overflow: hidden;
+  transform: translateY(3rem);
+  opacity: 0;
+  animation: name1 1s cubic-bezier(0.19, 1, 0.22, 1) 4.8s both;
+}
+@keyframes name1 {
+  100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+}
+.AboutMeName > h1 {
+  font-family: var(--font-body);
+  color: var(--gray2);
+  font-size: 3rem;
+  font-family: "Poiret One", cursive;
+  transform: translateY(5rem);
+  opacity: 0;
+  animation: name2 1s cubic-bezier(0.19, 1, 0.22, 1) 5s both;
+}
+
+@keyframes name2 {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.AboutMeName > h5 {
+  position: relative;
+  width: max-content;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  color: var(--gray2);
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  width: fit-content;
+  line-height: 3rem;
+  transform: translateY(5rem);
+  opacity: 0;
+  animation: devFromIndia 1s cubic-bezier(0.19, 1, 0.22, 1) 5.5s both;
+}
+.AboutMeName > h5 > .lgline {
+  position: absolute;
+  width: 0rem;
+  top: calc(100% + 6px);
+  background-color: var(--gray2);
+  height: 3px;
+  animation: lgline 1.2s cubic-bezier(0.19, 1, 0.22, 1) 5.7s both;
+}
+
+@keyframes lgline {
+  100% {
+    width: 20rem;
+  }
+}
+@keyframes devFromIndia {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.AboutMeName > h5 > span {
+  background-image: linear-gradient(90deg, #f544ba, #ff146e 70.71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.AboutMeProjCTA {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-top: 1.75rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--gray2);
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  transform: translateY(5rem);
+  opacity: 0;
+  animation: devFromIndia 1s cubic-bezier(0.19, 1, 0.22, 1) 6s both;
+}
+.AboutMeProjCTA > div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: linear-gradient(90deg, #ba2ae6, #ff146e 70.71%);
+  color: var(--gray2);
+}
+.AboutMeContact {
+  padding-top: 2rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--gray2);
+  transform: translateY(5rem);
+  opacity: 0;
+  animation: devFromIndia 1s cubic-bezier(0.19, 1, 0.22, 1) 6.2s both;
+}
+.AboutMeContact > h3 {
+  letter-spacing: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+.AboutMeContact > h5 {
+  margin-top: 10px;
+}
+
+.AboutMeContact > h5 > span {
+  color: #ff1188;
+  font-size: 12px;
+}

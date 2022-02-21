@@ -1,0 +1,27 @@
+.TreeNodeCon {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  box-shadow: -9px 17px 42px -24px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: -9px 17px 42px -24px rgba(0, 0, 0, 1);
+  -moz-box-shadow: -9px 17px 42px -24px rgba(0, 0, 0, 1);
+  font-family: "Montserrat", sans-serif !important;
+}
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+.TreeNodeTitle {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid var(--pink-dark);
+  color: var(--gray0);
+  font-family: var(--font-body) !important;
+  line-height: 1px;
+}
+.TreeNodeTitle:focus {
+  outline: none;
+}
+/* * {
+  box-sizing: border-box;
+} */

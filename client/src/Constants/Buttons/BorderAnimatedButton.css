@@ -1,0 +1,77 @@
+:root {
+  --var-animated-btn-color: var(--pink-dark);
+}
+.anim-btn {
+  display: inline-block;
+  position: relative;
+  background: none;
+  color: var(--gray0);
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+}
+.anim-btn-content {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+.anim-btn::before,
+.anim-btn::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: var(--var-animated-btn-color);
+}
+
+.anim-btn-content::before,
+.anim-btn-content::after {
+  content: "";
+  width: 2px;
+  height: 0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: var(--var-animated-btn-color);
+}
+.anim-btn:hover::before,
+.anim-btn:hover::after {
+  width: 100%;
+}
+.anim-btn:hover .anim-btn-content::before,
+.anim-btn:hover .anim-btn-content::after {
+  height: 100%;
+}
+/*----- .anim-btn 1 -----*/
+.btn-1::before,
+.btn-1::after {
+  transition-delay: 0.2s;
+}
+.btn-1 .anim-btn-content::before,
+.btn-1 .anim-btn-content::after {
+  transition-delay: 0s;
+}
+.btn-1::before {
+  right: 0;
+  top: 0;
+}
+.btn-1::after {
+  left: 0;
+  bottom: 0;
+}
+.btn-1 .anim-btn-content::before {
+  left: 0;
+  top: 0;
+}
+.btn-1 .anim-btn-content::after {
+  right: 0;
+  bottom: 0;
+}
+.btn-1:hover::before,
+.btn-1:hover::after {
+  transition-delay: 0s;
+}
+.btn-1:hover .anim-btn-content::before,
+.btn-1:hover .anim-btn-content::after {
+  transition-delay: 0.2s;
+}

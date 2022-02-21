@@ -1,0 +1,51 @@
+.SkillsCardAboutMe {
+  position: relative;
+  display: flex;
+  background-color: rgba(137, 43, 226, 0.233);
+  width: 100%;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+}
+.SkillsCardHead {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  font-style: var(--font-body);
+  color: var(--gray2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 30%;
+  min-height: 300px;
+}
+.SkillsCardLeft {
+  position: absolute;
+  top: -20%;
+  left: -10%;
+}
+.SkillTitle {
+  font-weight: 900;
+  font-style: var(--font-head);
+  color: black;
+  position: absolute;
+  top: 50%;
+  transform: translateX(60%);
+  font-size: 2rem;
+}
+.AboutMeSkills {
+  width: 100%;
+  padding-top: 0%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  padding-inline: 5rem;
+  position: relative;
+}
+.AboutMeCardsHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
