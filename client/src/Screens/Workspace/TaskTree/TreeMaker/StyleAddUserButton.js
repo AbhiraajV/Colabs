@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   search__user: {
     display: "flex",
     justifyContent: "center",

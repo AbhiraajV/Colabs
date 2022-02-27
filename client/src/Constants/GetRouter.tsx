@@ -1,6 +1,6 @@
 import React from "react";
 import WorkspaceMain from "../Screens/Workspace/WorkspaceMain";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import AboutMe from "../Screens/AboutMe/AboutMe";
 import { HeroStateType } from "../Common/Types";
 import Join from "../Screens/Join";
@@ -17,7 +17,12 @@ function GetRouter({ cur, heroState }: Props) {
   }
   const renderCur = () => {
     if (cur == "about") return <AboutMe />;
-    if (cur == "tasks") return <WorkspaceMain />;
+    if (cur == "tasks")
+      return localStorage.getItem("user") ? (
+        <Navigate replace to="/join" />
+      ) : (
+        <WorkspaceMain />
+      );
     if (cur == "join") return <Join />;
     return <></>;
   };

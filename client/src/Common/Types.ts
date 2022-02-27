@@ -13,3 +13,19 @@ export const pageState = (): HeroStateType => {
     join: "HIDE",
   };
 };
+
+export type isFilled = string;
+export type FormInputType = {
+  username: isFilled;
+  email: isFilled;
+  password: isFilled;
+  "confirm password": isFilled;
+};
+export const FormInput = (): FormInputType => {
+  return {
+    username: "",
+    email: "",
+    password: "",
+    "confirm password": "",
+  };
+};

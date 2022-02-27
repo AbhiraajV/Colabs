@@ -12,7 +12,7 @@
   transition: background-color 250ms ease-in-out;
   z-index: -12;
   position: relative;
-  animation: AboutMeBlock 1.3s cubic-bezier(0.19, 1, 0.22, 1) 0.5s both;
+  animation: AboutMeBlock 1.3s cubic-bezier(0.19, 1, 0.22, 1) both;
 }
 .AboutMe::-webkit-scrollbar {
   width: 7px;

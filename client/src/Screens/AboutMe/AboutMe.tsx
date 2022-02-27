@@ -15,7 +15,7 @@ function About({}: Props): ReactElement {
         <PortfolioTouchSlider setShowProj={setShowProj} />
       </div>
 
-      <SkillsAboutMe />
+      {/* <SkillsAboutMe /> */}
     </div>
   );
 }

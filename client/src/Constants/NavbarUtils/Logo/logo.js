@@ -2,7 +2,6 @@ import React from "react";
 import "./Logo.css";
 import Logo from "./Logo1.svg";
 function NavLogo() {
-  console.log(Logo);
   return (
     <div
       style={{

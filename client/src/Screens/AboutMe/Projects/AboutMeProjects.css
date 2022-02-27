@@ -6,7 +6,7 @@
   color: var(--gray2);
   opacity: 0;
   transform: translateY(20em);
-  animation: glassup 1s cubic-bezier(0.19, 1, 0.22, 1) 6.5s both;
+  animation: glassup 1s cubic-bezier(0.19, 1, 0.22, 1) 0.5s both;
 }
 @keyframes glassup {
   100% {

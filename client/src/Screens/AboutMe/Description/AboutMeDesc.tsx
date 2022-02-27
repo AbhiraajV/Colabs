@@ -18,13 +18,13 @@ function AboutMeDesc({}: Props): ReactElement {
             <div className="lgline"></div>
           </h5>
         </div>
-        <div className="AboutMeProjCTA">
+        {/* <div className="AboutMeProjCTA">
           <p style={{ marginTop: "30px" }}>
             <Link to="">Instagram</Link> | <Link to="">LinkdIN</Link> |
             <Link to="">Facebook</Link>
           </p>
-        </div>
-        <div className="AboutMeContact">
+        </div> */}
+        {/* <div className="AboutMeContact">
           <h3>CONTACT ME</h3>
           <h5>
             Email : <span>abhiraajverma@gmail.com</span>
@@ -32,8 +32,7 @@ function AboutMeDesc({}: Props): ReactElement {
           <h5>
             Contact Number : <span>+91 9987712345</span>
           </h5>
-          {/* <h3>HELP ME OUT</h3> */}
-        </div>
+        </div> */}
       </div>
     </div>
   );

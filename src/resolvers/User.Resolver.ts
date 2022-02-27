@@ -35,6 +35,7 @@ export default class UserResolver {
   @Mutation(() => User)
   @UseMiddleware(UserInterceptor)
   CreateUser(@Arg("input") input: createUserInput) {
+    console.log(input);
     return this.userService
       .createUserService(input)
       .then((curUser) => {

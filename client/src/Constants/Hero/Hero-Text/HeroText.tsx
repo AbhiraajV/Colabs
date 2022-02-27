@@ -8,7 +8,6 @@ interface Props {}
 
 function HeroText({}: Props): ReactElement {
   const curWidth = useWindowDimension();
-  console.log(curWidth.width);
   return (
     <div className={curWidth.width > 500 ? "Hero-Text HeroGlass" : "Hero-Text"}>
       <div

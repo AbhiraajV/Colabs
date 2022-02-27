@@ -20,7 +20,7 @@
   width: 0;
   height: 3px;
   background: var(--gray2);
-  animation: smline 0.5s cubic-bezier(0.19, 1, 0.22, 1) 4.3s both;
+  animation: smline 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0.5s both;
 }
 @keyframes smline {
   100% {
@@ -35,7 +35,7 @@
   overflow: hidden;
   transform: translateY(3rem);
   opacity: 0;
-  animation: name1 1s cubic-bezier(0.19, 1, 0.22, 1) 4.8s both;
+  animation: name1 1s cubic-bezier(0.19, 1, 0.22, 1) 1s both;
 }
 @keyframes name1 {
   100% {
@@ -50,7 +50,7 @@
   font-family: "Poiret One", cursive;
   transform: translateY(5rem);
   opacity: 0;
-  animation: name2 1s cubic-bezier(0.19, 1, 0.22, 1) 5s both;
+  animation: name2 1s cubic-bezier(0.19, 1, 0.22, 1) 1s both;
 }
 
 @keyframes name2 {
@@ -73,7 +73,7 @@
   line-height: 3rem;
   transform: translateY(5rem);
   opacity: 0;
-  animation: devFromIndia 1s cubic-bezier(0.19, 1, 0.22, 1) 5.5s both;
+  animation: devFromIndia 1s cubic-bezier(0.19, 1, 0.22, 1) 1.5s both;
 }
 .AboutMeName > h5 > .lgline {
   position: absolute;
@@ -81,7 +81,7 @@
   top: calc(100% + 6px);
   background-color: var(--gray2);
   height: 3px;
-  animation: lgline 1.2s cubic-bezier(0.19, 1, 0.22, 1) 5.7s both;
+  animation: lgline 1.2s cubic-bezier(0.19, 1, 0.22, 1) 1.7s both;
 }
 
 @keyframes lgline {
@@ -113,7 +113,7 @@
   letter-spacing: 7px;
   transform: translateY(5rem);
   opacity: 0;
-  animation: devFromIndia 1s cubic-bezier(0.19, 1, 0.22, 1) 6s both;
+  animation: devFromIndia 1s cubic-bezier(0.19, 1, 0.22, 1) 1s both;
 }
 .AboutMeProjCTA > div {
   width: 50px;
@@ -133,7 +133,7 @@
   color: var(--gray2);
   transform: translateY(5rem);
   opacity: 0;
-  animation: devFromIndia 1s cubic-bezier(0.19, 1, 0.22, 1) 6.2s both;
+  animation: devFromIndia 1s cubic-bezier(0.19, 1, 0.22, 1) 1.2s both;
 }
 .AboutMeContact > h3 {
   letter-spacing: 10px;
