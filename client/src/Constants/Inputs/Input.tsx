@@ -5,7 +5,7 @@ interface Props {
   placeholder: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onClick: () => void;
-  children:
+  children?:
     | JSX.Element
     | React.ReactChild[]
     | React.ReactChild

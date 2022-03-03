@@ -19,9 +19,9 @@ function GetRouter({ cur, heroState }: Props) {
     if (cur == "about") return <AboutMe />;
     if (cur == "tasks")
       return localStorage.getItem("user") ? (
-        <Navigate replace to="/join" />
-      ) : (
         <WorkspaceMain />
+      ) : (
+        <Navigate replace to="/join" />
       );
     if (cur == "join") return <Join />;
     return <></>;
@@ -29,7 +29,7 @@ function GetRouter({ cur, heroState }: Props) {
   return (
     <Routes>
       <Route
-        path={"/" + cur}
+        path={"/" + cur + "/*"}
         element={<div className={HeroState[heroState[cur]]}>{renderCur()}</div>}
       />
     </Routes>

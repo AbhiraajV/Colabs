@@ -10,4 +10,5 @@
   z-index: 9999;
   font-family: var(--font-head) !important;
   font-weight: bolder;
+  color: var(--gray0);
 }

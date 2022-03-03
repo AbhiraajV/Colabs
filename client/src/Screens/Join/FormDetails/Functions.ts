@@ -22,6 +22,7 @@ const gqlFunctions = ({
   VerifyUser,
   CreateUser,
   pushToTask,
+  LoginUser,
 }: any) => {
   const VerifyUserFunc = () => {
     const variables = {
@@ -48,13 +49,25 @@ const gqlFunctions = ({
       variables: { input: variables },
     })
       .then((data: any) => {
-        console.log(data + "sjkf");
         setResult(data.data.CreateUser);
         seterror("");
       })
       .catch((err: { graphQLErrors: any }) => seterror(err?.graphQLErrors));
   };
-  const LoginFunction = () => {};
+  const LoginFunction = () => {
+    const variables = {
+      email: formInput.email,
+      password: formInput.password,
+    };
+    LoginUser({ variables: { input: variables } })
+      .then((data: any) => {
+        console.log(data);
+        setResult(data.data.LoginUser);
+        localStorage.setItem("user", data.data.LoginUser);
+        seterror("");
+      })
+      .catch((err: { graphQLErrors: any }) => seterror(err?.graphQLErrors));
+  };
   return {
     verification: VerifyUserFunc,
     register: RegisterFunction,

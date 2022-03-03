@@ -27,8 +27,10 @@ async function ServerFunction() {
     schema,
     context: (ctx: Context) => {
       const authToken = ctx.req.headers.authorization;
+      console.log(ctx.req.headers);
       if (authToken) {
         const user = verifyJWT(authToken.replace("Bearer ", ""));
+        console.log(user);
         ctx.user = user;
       }
       return ctx;

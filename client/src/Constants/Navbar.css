@@ -1,5 +1,4 @@
 .navbar {
-  background-color: var(--gray5);
   display: flex;
   padding-top: 1rem;
   padding-inline: 2rem;
@@ -30,12 +29,13 @@
 }
 .navbar-options {
   font-family: var(--font-body);
-  color: white;
+  color: var(--gray0);
 }
 
 .checkbox {
   opacity: 0;
   position: absolute;
+  border: 1px solid green;
 }
 .checkbox:checked + .label {
   background-color: var(--gray6);
@@ -46,6 +46,7 @@
   background: black;
 }
 .label {
+  border: 2px solid var(--gray0) !important;
   background: var(--gray6);
   height: 33px;
   width: 55px;

@@ -116,13 +116,13 @@
 }
 .workspace-header-holder {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 }
 .workspace-header {
   display: flex;
-  width: 60%;
-  align-items: center;
-  justify-content: space-between;
+  width: 90%;
+  /* align-items: center;
+  justify-content: space-between; */
   font-size: 1.5rem;
 }
 @media screen and (max-width: 650px) {
@@ -134,9 +134,10 @@
 .workspace-head-container {
   background-color: var(--gray6);
   display: flex;
-  padding-inline: 20% !important;
+  padding-inline: 2% !important;
   justify-content: space-between;
-  align-items: center !important;
+  /* align-items: center !important; */
+  flex-direction: column;
   gap: 2rem;
 }
 .WorkspaceTitleInput {

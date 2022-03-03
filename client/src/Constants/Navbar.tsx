@@ -5,7 +5,7 @@ import TaskManager from "./NavbarUtils/TaskManager";
 import Tools from "./NavbarUtils/Tools";
 import Private from "./NavbarUtils/Private";
 import Logo from "./NavbarUtils/Logo/logo";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FaSun } from "react-icons/fa";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import useWindowDimension from "../Utils/GetWidth";
@@ -15,9 +15,20 @@ interface Props {
 }
 
 function Navbar({ setHeroState }: Props): ReactElement {
+  const isLogged = localStorage.getItem("user");
   const width = useWindowDimension().width;
+  const location = useLocation();
   return (
-    <div className="navbar">
+    <div
+      className="navbar"
+      style={
+        location.pathname == "/"
+          ? {
+              backgroundColor: "var(--gray5)",
+            }
+          : { backgroundColor: "transparent" }
+      }
+    >
       <div className="navbar-logo">
         <Logo />
       </div>
@@ -57,24 +68,26 @@ function Navbar({ setHeroState }: Props): ReactElement {
         >
           <About />
         </div>
-        <div className="navbar-options">
-          <Link
-            to="/join"
-            onClick={() => {
-              setHeroState((prev) => {
-                return {
-                  ...prev,
+        {!isLogged && (
+          <div className="navbar-options">
+            <Link
+              to="/join"
+              onClick={() => {
+                setHeroState((prev) => {
+                  return {
+                    ...prev,
 
-                  tasks: "HIDE",
-                  about: "HIDE",
-                  join: "SHOW",
-                };
-              });
-            }}
-          >
-            <Private />
-          </Link>
-        </div>
+                    tasks: "HIDE",
+                    about: "HIDE",
+                    join: "SHOW",
+                  };
+                });
+              }}
+            >
+              <Private />
+            </Link>
+          </div>
+        )}
         <input
           type="checkbox"
           className="checkbox"

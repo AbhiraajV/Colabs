@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import "./SearchBar.css";
-import { ImSearch } from "react-icons/im";
+import { IoPersonAdd } from "react-icons/io5";
 import { AiFillCloseCircle } from "react-icons/ai";
 import OptionDescription from "../OptionDescription/OptionDescription";
 import OptionContainer from "../OptionContainer/OptionContainer";
@@ -20,7 +20,7 @@ const SearchBar: FC<Props> = ({}: Props) => {
         type="text"
         className={"navbar-search" + searchInputClass}
         value={toSearch}
-        placeholder={searchInputClass ? "explore tools..." : ""}
+        placeholder={searchInputClass ? "Enter Email of User to Add" : ""}
         onChange={(e) => {
           setToSearch(e.target.value);
         }}
@@ -35,7 +35,7 @@ const SearchBar: FC<Props> = ({}: Props) => {
           }}
         />
       ) : (
-        <ImSearch
+        <IoPersonAdd
           className={"searchIcon" + searchInputClass}
           onClick={() => {
             setSearchDescClass("");
@@ -43,7 +43,7 @@ const SearchBar: FC<Props> = ({}: Props) => {
           }}
         />
       )}
-      <OptionDescription searchDescClass={searchDescClass} curDesc="Search" />
+      <OptionDescription searchDescClass={searchDescClass} curDesc="+User" />
     </OptionContainer>
   );
 };

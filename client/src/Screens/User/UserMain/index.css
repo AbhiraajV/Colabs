@@ -1,0 +1,55 @@
+.UserMain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  gap: 2rem;
+}
+.AddUserInput {
+  transform: translateX(-200px);
+}
+.UserDet {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+.UserName {
+  font-family: var(--font-head);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.UserEmail {
+  opacity: 0.8;
+}
+.UserNameHolder {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.Circle {
+  width: 300px;
+}
+.Circle ul li {
+  list-style: none;
+  padding: 10px;
+  width: 100%;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s;
+}
+.Circle ul {
+  transition: transform 0.25s;
+}
+
+.Circle ul li:hover {
+  transform: scale(1.1);
+  z-index: 100;
+  background-color: var(--pink-dark);
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+  color: white;
+  opacity: 1 !important;
+}
+.Circle ul:hover li {
+  opacity: 0.4;
+}

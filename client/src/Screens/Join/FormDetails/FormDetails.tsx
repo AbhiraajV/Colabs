@@ -35,6 +35,7 @@ function FormDetails({}: Props) {
     seterror,
     pushToTask,
     result,
+    LoginUser,
   });
   return formType === "REG" && result ? (
     <VerificationForm
@@ -80,7 +81,7 @@ function FormDetails({}: Props) {
           <span
             key={index}
             style={{
-              color: "red",
+              color: "var(--red-dark)",
               width: "100%",
               fontWeight: "bolder",
               fontSize: "1rem",

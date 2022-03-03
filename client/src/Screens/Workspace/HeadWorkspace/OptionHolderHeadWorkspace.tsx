@@ -14,7 +14,7 @@ function WorkspaceHeadOptions() {
     <div className="workspace-header-holder">
       <nav className="page__menu page__custom-settings menu">
         <ul className="menu__list r-list">
-          <WorkspaceHeadOption
+          {/* <WorkspaceHeadOption
             onClick={() => {
               setOptions((prev) => {
                 return {
@@ -27,8 +27,9 @@ function WorkspaceHeadOptions() {
             isActive={options.showAddUserPage}
           >
             <RiUserAddFill className="workspace-header-buttons" />
-          </WorkspaceHeadOption>
+          </WorkspaceHeadOption> */}
           <WorkspaceHeadOption
+            link=""
             onClick={() => {
               setOptions((prev) => {
                 return {
@@ -43,6 +44,7 @@ function WorkspaceHeadOptions() {
             <FaTasks className="workspace-header-buttons" />
           </WorkspaceHeadOption>{" "}
           <WorkspaceHeadOption
+            link="users"
             onClick={() => {
               setOptions((prev) => {
                 return {

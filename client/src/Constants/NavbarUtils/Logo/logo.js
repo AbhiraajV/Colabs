@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Logo.css";
-import Logo from "./Logo1.svg";
+import LogoBlack from "./Logo2.svg";
 function NavLogo() {
   return (
     <div
@@ -16,7 +16,7 @@ function NavLogo() {
       }}
       className="Logo"
     >
-      <img src={Logo} alt="Co-Lab" width={"100px"} />
+      {/* <img src={LogoBlack} alt="Co-Lab" width={"100px"} /> */}
       <div className="Logo-Text">Colabs</div>
     </div>
   );
