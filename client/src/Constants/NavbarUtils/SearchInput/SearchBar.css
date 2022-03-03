@@ -63,6 +63,20 @@
   padding: 0.35rem;
   transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }
+.searchIcon2 {
+  position: absolute;
+  left: 0rem;
+  cursor: pointer;
+
+  /* color: white; */
+  background-color: var(--pink-dark);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.35rem;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+
 /* .searchIcon:hover {
   color: var(--gray1);
   background-color: var(--purple-dark);
@@ -71,6 +85,14 @@
 .searchIcon-open {
   position: absolute;
   right: 1.5rem;
+  top: 0.5rem;
+  color: var(--pink-dark);
+  font-size: larger;
+  transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+.searchIcon2-open {
+  position: absolute;
+  right: 4rem;
   top: 0.5rem;
   color: var(--pink-dark);
   font-size: larger;

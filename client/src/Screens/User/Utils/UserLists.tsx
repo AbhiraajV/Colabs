@@ -19,7 +19,10 @@ function UserLists({ listItems, icon, heading }: Props) {
       <div className="Circle">
         <ul>
           {listItems.map((item, id) => (
-            <li key={id}>{item}</li>
+            <li key={item._id}>
+              <h3>{item.username}</h3>
+              <h4>{item.email}</h4>
+            </li>
           ))}
         </ul>
       </div>

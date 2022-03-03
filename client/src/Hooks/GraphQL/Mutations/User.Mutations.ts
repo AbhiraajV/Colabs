@@ -1,4 +1,9 @@
 import { gql } from "@apollo/client";
+export const ADD_USER_TO_CIRCLE = gql`
+  mutation AddUserToCircle($input: addUserToCircleInput!) {
+    AddUserToCircle(input: $input)
+  }
+`;
 export const CREATE_USER_MUTATION = gql`
   mutation CreateUser($input: createUserInput!) {
     CreateUser(input: $input) {
