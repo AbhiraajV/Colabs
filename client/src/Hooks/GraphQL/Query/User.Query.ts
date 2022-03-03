@@ -6,8 +6,17 @@ export const GET_CUR_USER = gql`
       username
       email
       projects {
-        Title
         _id
+        Progress
+        Tasks {
+          TaskTitle
+        }
+        Title
+        Members {
+          username
+          email
+          _id
+        }
       }
       circle {
         username

@@ -9,7 +9,13 @@ interface Props {
 const TreeMaker = ({ treeData }: Props) => {
   return (
     <>
-      <Tree name={<TreeNode title={treeData.content} />}>
+      <Tree
+        name={
+          <TreeNode
+            title={treeData.Title ? treeData.Title : treeData.TaskTitle}
+          />
+        }
+      >
         <div
           style={{
             marginTop: "2rem",
@@ -21,10 +27,15 @@ const TreeMaker = ({ treeData }: Props) => {
         >
           <DeadlineTodo />
         </div>
-        {treeData.children &&
-          treeData.children?.map((child, index) => (
-            <TreeMaker treeData={child} key={index} />
-          ))}
+        {treeData.Tasks
+          ? treeData.Tasks &&
+            treeData.Tasks?.map((child, index) => (
+              <TreeMaker treeData={child} key={index} />
+            ))
+          : treeData.ChildTask &&
+            treeData.ChildTask?.map((child, index) => (
+              <TreeMaker treeData={child} key={index} />
+            ))}
       </Tree>
     </>
   );

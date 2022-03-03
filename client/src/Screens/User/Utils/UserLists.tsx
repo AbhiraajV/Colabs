@@ -1,5 +1,7 @@
-import React from "react";
-
+import { useMutation } from "@apollo/client";
+import React, { useState } from "react";
+import { AiFillCloseCircle } from "react-icons/ai";
+import { REMOVE_USER_FROM_CIRCLE } from "../../../Hooks/GraphQL/Mutations/User.Mutations";
 type Props = {
   listItems: any[];
   icon?:
@@ -8,9 +10,33 @@ type Props = {
     | React.ReactChild
     | React.ReactElement;
   heading: string;
+  seterror: any;
+  setMadeChange: any;
 };
 
-function UserLists({ listItems, icon, heading }: Props) {
+function UserLists({
+  listItems,
+  icon,
+  heading,
+  seterror,
+  setMadeChange,
+}: Props) {
+  const [email, setEmail] = useState("");
+  const [removeUserFromCircleInput] = useMutation(REMOVE_USER_FROM_CIRCLE);
+  const RemoveUser = (email: string) => {
+    const variables = {
+      email,
+    };
+    console.log(variables);
+    removeUserFromCircleInput({
+      variables: { input: variables },
+    })
+      .then((data: any) => {
+        console.log(data);
+        setMadeChange(true);
+      })
+      .catch((err: { graphQLErrors: any }) => seterror(err?.graphQLErrors));
+  };
   return (
     <div className="UserDet">
       <h2 className="UserName">
@@ -19,9 +45,22 @@ function UserLists({ listItems, icon, heading }: Props) {
       <div className="Circle">
         <ul>
           {listItems.map((item, id) => (
-            <li key={item._id}>
+            <li
+              key={item._id}
+              style={{ position: "relative", marginBottom: "1rem" }}
+            >
               <h3>{item.username}</h3>
-              <h4>{item.email}</h4>
+              <h4 style={{ opacity: 0.8 }}>{item.email}</h4>
+              <AiFillCloseCircle
+                style={{
+                  position: "absolute",
+                  top: "-5px",
+                  right: "-5",
+                  cursor: "pointer",
+                }}
+                size={"25px"}
+                onClick={() => RemoveUser(item.email)}
+              />
             </li>
           ))}
         </ul>

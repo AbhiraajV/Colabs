@@ -6,7 +6,7 @@ import {
   removeUserFromCircleInput,
   User,
 } from "../schema/User.Schema";
-import { UserModel } from "../schema/GetModelsForClass";
+import { ProjectModel, UserModel } from "../schema/GetModelsForClass";
 import { findByEmail } from "../schema/User.Schema";
 import bcrypt from "bcrypt";
 import { ApolloError } from "apollo-server";
@@ -138,7 +138,22 @@ export const UserInterceptor: MiddlewareFn<any> = async ({ info }, next) => {
       populatedCircle.push(user_in_circle);
     }
   }
+
+  var projects = user.projects;
+  var populatedprojects = [];
+  if (projects.length !== 0) {
+    for (var i in projects) {
+      let user_in_projects = await ProjectModel.findById(projects[i]);
+      user_in_projects!.createdBy = await UserModel.findById(
+        user_in_projects?.createdBy
+      ).username;
+      populatedprojects.push(user_in_projects);
+    }
+  }
+  console.log(populatedprojects);
   user.circle = populatedCircle;
+  user.projects = populatedprojects;
+
   // removing password verificationCode
   user.password = "Restricted";
   user.verificationCode = "Restricted";

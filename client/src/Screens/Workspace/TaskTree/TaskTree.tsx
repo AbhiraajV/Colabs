@@ -1,6 +1,11 @@
 import React from "react";
-import treeData from "./treeData";
 import TreeMaker from "./TreeMaker/TreeMaker";
-const TaskTree = () => <TreeMaker treeData={treeData} />;
-
+import treeDatas, { treeDataInterface } from "./treeData";
+const TaskTree = (treeData: any) => (
+  <>
+    {treeData.treeData.map((treeDat: treeDataInterface, index: any) => (
+      <TreeMaker treeData={treeDat} />
+    ))}
+  </>
+);
 export default TaskTree;

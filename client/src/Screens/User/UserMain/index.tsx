@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.css";
 import UserInfo from "../Utils/UserInfo";
 import UserLists from "../Utils/UserLists";
@@ -6,10 +6,11 @@ import SearchBar from "../../../Constants/NavbarUtils/SearchInput/SearchBar";
 import { ADD_USER_TO_CIRCLE } from "../../../Hooks/GraphQL/Mutations/User.Mutations";
 import { useMutation } from "@apollo/client";
 type Props = {
+  setMadeChange: any;
   User: any;
 };
 
-function UserMain({ User }: Props) {
+function UserMain({ User, setMadeChange }: Props) {
   const [AddUserToCircle] = useMutation(ADD_USER_TO_CIRCLE);
   const [email, setEmail] = useState("");
   const [result, setResult] = useState();
@@ -25,10 +26,17 @@ function UserMain({ User }: Props) {
       .then((data: any) => {
         console.log(data);
         setResult(data.data.AddUserToCircle);
+        setMadeChange(true);
         seterror([]);
       })
       .catch((err: { graphQLErrors: any }) => seterror(err?.graphQLErrors));
   };
+  useEffect(() => {
+    if (error) {
+      setTimeout(() => seterror([]), 10000);
+    }
+  }, [error]);
+
   return (
     <div className="UserMain">
       {error &&
@@ -53,7 +61,9 @@ function UserMain({ User }: Props) {
       />
       <UserLists
         listItems={User.circle ? User.circle : []}
+        setMadeChange={setMadeChange}
         heading={"Your Circle"}
+        seterror={seterror}
         icon={<SearchBar setToSearch={setEmail} onclick={() => AddUser()} />}
       />
     </div>
