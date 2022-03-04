@@ -24,6 +24,12 @@
   color: var(--gray2);
 }
 .InputWrapper {
+  width: 350px !important;
+}
+@media screen and (max-width: 400px) {
+  .InputWrapper {
+    width: 300px !important;
+  }
 }
 .InputHolder {
   background-color: rgba(255, 255, 255, 0);
@@ -46,7 +52,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  margin-right: -1.5rem;
+  margin-right: 1rem;
   border: none;
   outline: none;
   background: -webkit-linear-gradient(#d581c0, #e00f71);

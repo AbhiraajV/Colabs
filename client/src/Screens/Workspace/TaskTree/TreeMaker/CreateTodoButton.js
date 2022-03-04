@@ -2,16 +2,16 @@ import React from "react";
 import { FaCodeBranch } from "react-icons/fa";
 import CreateTodoSubmissionFuntion from "./CreateTodoSubmissionFuntion";
 import "./CreateTodoButtonStyle.css";
-function CreateTodoButton() {
+function CreateTodoButton({ count }) {
   return (
     <>
       <div
         className="createButtonStyle"
-        onClick={CreateTodoSubmissionFuntion()}
+        onClick={() => CreateTodoSubmissionFuntion()}
       >
         <FaCodeBranch />
+        <div className="createTodoCount">{count}</div>
       </div>
-      <div className="createTodoCount">12</div>
     </>
   );
 }

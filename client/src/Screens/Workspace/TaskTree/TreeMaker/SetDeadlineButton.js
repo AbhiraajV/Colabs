@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BsFillCalendar2WeekFill } from "react-icons/bs";
 import { AiFillCloseCircle } from "react-icons/ai";
-function SetDeadlineButton({ setShowCalendar, showCalendar }) {
+import { FaUsers } from "react-icons/fa";
+function SetDeadlineButton({ setShowCalendar, showCalendar, isCal }) {
   const [className, setClassName] = useState("showCalendar");
   return (
     <div
@@ -19,7 +20,13 @@ function SetDeadlineButton({ setShowCalendar, showCalendar }) {
       }}
     >
       {!showCalendar ? (
-        <BsFillCalendar2WeekFill size={"1.5rem"} />
+        <>
+          {isCal ? (
+            <BsFillCalendar2WeekFill size={"1.5rem"} />
+          ) : (
+            <FaUsers size={"1.5rem"} />
+          )}
+        </>
       ) : (
         <AiFillCloseCircle size={"1.5rem"} />
       )}

@@ -4,6 +4,7 @@ export default {
     justifyContent: "center",
     alignItems: "center",
     marginLeft: "-1.5rem",
+    position: "relative",
   },
   search__user__icon: {
     color: "var(--gray6)",
@@ -23,8 +24,8 @@ export default {
     fontFamily: "inherit",
     outline: "none",
     color: "var(--gray0)",
-    width: "2rem",
-    height: "2rem",
+    width: "35px",
+    height: "35px",
     backgroundColor: "var(--gray0)",
     borderBottom: "0px solid #1f2833",
     transition:

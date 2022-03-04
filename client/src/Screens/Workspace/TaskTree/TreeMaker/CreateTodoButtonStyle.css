@@ -19,8 +19,8 @@
 }
 .createTodoCount {
   position: absolute;
-  top: 1.2rem;
-  left: 12.6rem;
+  top: 1.5rem;
+  right: 1.5rem;
   background: var(--pink-dark);
   width: 20px;
   height: 20px;
@@ -30,6 +30,8 @@
   justify-content: center;
   font-size: 13px;
   z-index: 1200;
+  transform: rotate(180deg);
+  color: white;
 }
 .showCalendar {
   margin: 1rem;

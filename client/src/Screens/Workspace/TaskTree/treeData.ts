@@ -1,7 +1,7 @@
 export interface treeDataInterface {
   Title?: string;
   TaskTitle?: string;
-
+  Members: any[];
   Tasks?: treeDataInterface[];
   ChildTask?: treeDataInterface[];
 }

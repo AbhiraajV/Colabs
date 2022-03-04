@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
+import GetCon from "../../../../Constants/getCon";
 import { treeDataInterface } from "../treeData";
 import { DeadlineTodo } from "./DeadlineTodo";
+import Members from "./Members";
 import Tree from "./Tree";
 import TreeNode from "./TreeNode";
 interface Props {
@@ -9,24 +11,11 @@ interface Props {
 const TreeMaker = ({ treeData }: Props) => {
   return (
     <>
-      <Tree
-        name={
-          <TreeNode
-            title={treeData.Title ? treeData.Title : treeData.TaskTitle}
-          />
-        }
-      >
-        <div
-          style={{
-            marginTop: "2rem",
-            marginBottom: "3rem",
-            background: "rgba(0, 0, 0, 0.486)",
-            padding: "1rem",
-            borderRadius: "25px",
-          }}
-        >
-          <DeadlineTodo />
-        </div>
+      <Tree name={<TreeNode treeData={treeData} />}>
+        <GetCon
+          stuff={[<DeadlineTodo />, <Members listItems={treeData.Members} />]}
+        />
+
         {treeData.Tasks
           ? treeData.Tasks &&
             treeData.Tasks?.map((child, index) => (

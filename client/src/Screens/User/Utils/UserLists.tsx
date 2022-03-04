@@ -2,6 +2,7 @@ import { useMutation } from "@apollo/client";
 import React, { useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { REMOVE_USER_FROM_CIRCLE } from "../../../Hooks/GraphQL/Mutations/User.Mutations";
+import UseReload from "../../../Hooks/UseReload";
 type Props = {
   listItems: any[];
   icon?:
@@ -11,16 +12,9 @@ type Props = {
     | React.ReactElement;
   heading: string;
   seterror: any;
-  setMadeChange: any;
 };
 
-function UserLists({
-  listItems,
-  icon,
-  heading,
-  seterror,
-  setMadeChange,
-}: Props) {
+function UserLists({ listItems, icon, heading, seterror }: Props) {
   const [email, setEmail] = useState("");
   const [removeUserFromCircleInput] = useMutation(REMOVE_USER_FROM_CIRCLE);
   const RemoveUser = (email: string) => {
@@ -33,7 +27,7 @@ function UserLists({
     })
       .then((data: any) => {
         console.log(data);
-        setMadeChange(true);
+        UseReload();
       })
       .catch((err: { graphQLErrors: any }) => seterror(err?.graphQLErrors));
   };
