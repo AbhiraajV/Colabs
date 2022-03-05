@@ -11,6 +11,7 @@ import {
   addUserToCircleInput,
   createUserInput,
   findByEmail,
+  getUserByIdInput,
   loginUserInput,
   removeUserFromCircleInput,
   User,
@@ -31,6 +32,21 @@ export default class UserResolver {
   @UseMiddleware(UserInterceptor)
   async GetCurUser(@Ctx() context: Context) {
     return await GetUserFromCtx(context);
+  }
+  @Query(() => [User])
+  async GetUserById(@Arg("input") input: getUserByIdInput) {
+    console.log(input);
+    const uids = input.uid;
+    var ret = [];
+    for (var i in uids) {
+      const cur = await UserModel.findById(uids[i]);
+      ret.push({
+        _id: cur?._id,
+        username: cur?.username,
+        email: cur?.email,
+      });
+    }
+    return ret;
   }
   @Mutation(() => User)
   @UseMiddleware(UserInterceptor)

@@ -13,7 +13,7 @@ function WorkspaceMain() {
   console.log(curUser);
   return (
     <div className="workspace">
-      <WorkspaceHead />
+      <WorkspaceHead username={curUser.username as string} />
       <Routes>
         <Route
           path=""

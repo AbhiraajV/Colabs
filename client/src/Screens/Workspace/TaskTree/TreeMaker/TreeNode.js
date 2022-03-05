@@ -70,7 +70,7 @@ function TreeNode({ treeData }) {
             className="tick"
           />
         </div>
-        <CreateTodoButton count={treeData.Tasks.length} />
+        <CreateTodoButton count={treeData.Tasks ? treeData.Tasks.length : 0} />
         <AddUserButton
           count={treeData.Members.length}
           project_id={treeData._id}

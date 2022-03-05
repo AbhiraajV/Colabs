@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
+import Loading from "../../../../Common/Loading";
+import { useGetCurUserById } from "../../../../Hooks/GraphQL/Query/User.Query";
 import SetDeadlineButton from "./SetDeadlineButton";
 
 type Props = {
@@ -8,6 +10,12 @@ type Props = {
 
 function Members({ listItems }: Props) {
   const [showCalendar, setShowCalendar] = useState(false);
+  let listOfUserIds: string[] = [];
+  for (var i in listItems) {
+    listOfUserIds.push(listItems[i]._id);
+  }
+  let Users = useGetCurUserById(listOfUserIds);
+
   return (
     <div>
       <div
@@ -37,10 +45,10 @@ function Members({ listItems }: Props) {
         >
           <div className="Circle">
             <ul>
-              {listItems.length > 0 ? (
-                listItems.map((item, id) => (
+              {Users.length > 0 ? (
+                Users.map((item: any, id: any) => (
                   <li
-                    key={item._id}
+                    key={item._id + " " + id}
                     style={{ position: "relative", marginBottom: "1rem" }}
                   >
                     <h3>{item.username}</h3>

@@ -17,7 +17,7 @@ function GetCon({ stuff }: Props) {
             borderRadius: "25px",
             position: "relative",
             width: "fit-content",
-            minWidth: "300px",
+            transition: "width 0.25s ease-in-out,height 0.25s ease-in-out,",
           }}
           key={k}
         >

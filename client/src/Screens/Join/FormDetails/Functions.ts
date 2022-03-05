@@ -55,10 +55,12 @@ const gqlFunctions = ({
       .catch((err: { graphQLErrors: any }) => seterror(err?.graphQLErrors));
   };
   const LoginFunction = () => {
+    console.log(formInput);
     const variables = {
-      email: formInput.email,
+      email: formInput.username,
       password: formInput.password,
     };
+    console.log(variables);
     LoginUser({ variables: { input: variables } })
       .then((data: any) => {
         console.log(data);
@@ -66,7 +68,10 @@ const gqlFunctions = ({
         localStorage.setItem("user", data.data.LoginUser);
         seterror("");
       })
-      .catch((err: { graphQLErrors: any }) => seterror(err?.graphQLErrors));
+      .catch((err: { graphQLErrors: any }) => {
+        console.log(err);
+        seterror(err?.graphQLErrors);
+      });
   };
   return {
     verification: VerifyUserFunc,

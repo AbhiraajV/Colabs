@@ -72,6 +72,12 @@ export class User {
 }
 
 @InputType()
+export class getUserByIdInput {
+  @Field(() => [String])
+  @Prop({ required: true })
+  uid: string[];
+}
+@InputType()
 export class createUserInput {
   @Field(() => String)
   @Prop({ required: true })

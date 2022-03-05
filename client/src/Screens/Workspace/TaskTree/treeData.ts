@@ -4,6 +4,7 @@ export interface treeDataInterface {
   Members: any[];
   Tasks?: treeDataInterface[];
   ChildTask?: treeDataInterface[];
+  createdBy: { _id: string };
 }
 const treeData: any = [
   {

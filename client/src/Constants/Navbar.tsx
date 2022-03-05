@@ -3,6 +3,7 @@ import "./Navbar.css";
 import About from "./NavbarUtils/About";
 import TaskManager from "./NavbarUtils/TaskManager";
 import Tools from "./NavbarUtils/Tools";
+import { IoLogOutSharp } from "react-icons/io5";
 import Private from "./NavbarUtils/Private";
 import Logo from "./NavbarUtils/Logo/logo";
 import { Link, useLocation } from "react-router-dom";
@@ -10,6 +11,8 @@ import { FaSun } from "react-icons/fa";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import useWindowDimension from "../Utils/GetWidth";
 import { HeroStateType } from "../Common/Types";
+import Logout from "./NavbarUtils/Logout";
+import UseReload from "../Hooks/UseReload";
 interface Props {
   setHeroState: React.Dispatch<React.SetStateAction<HeroStateType>>;
 }
@@ -68,7 +71,7 @@ function Navbar({ setHeroState }: Props): ReactElement {
         >
           <About />
         </div>
-        {!isLogged && (
+        {!isLogged ? (
           <div className="navbar-options">
             <Link
               to="/join"
@@ -86,6 +89,16 @@ function Navbar({ setHeroState }: Props): ReactElement {
             >
               <Private />
             </Link>
+          </div>
+        ) : (
+          <div
+            className="navbar-options"
+            onClick={() => {
+              localStorage.removeItem("user");
+              UseReload();
+            }}
+          >
+            <Logout />{" "}
           </div>
         )}
         <input
